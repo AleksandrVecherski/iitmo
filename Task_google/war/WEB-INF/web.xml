@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+	<servlet>
+		<servlet-name>Task_google</servlet-name>
+		<servlet-class>com.test.Task_googleServlet</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>Task1Servlet</servlet-name>
+		<servlet-class>com.test.Task1Servlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Task2Servlet</servlet-name>
+		<servlet-class>com.test.Task2Servlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Task3Servlet</servlet-name>
+		<servlet-class>com.test.Task3Servlet</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Task5Servlet</servlet-name>
+		<servlet-class>com.test.Task5Servlet</servlet-class>
+	</servlet>
+	
+	<servlet-mapping>
+		<servlet-name>Task_google</servlet-name>
+		<url-pattern>/task_google</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Task1Servlet</servlet-name>
+		<url-pattern>/task1Servlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Task2Servlet</servlet-name>
+		<url-pattern>/task2Servlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Task3Servlet</servlet-name>
+		<url-pattern>/task3Servlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Task5Servlet</servlet-name>
+		<url-pattern>/task5Servlet</url-pattern>
+	</servlet-mapping>
+	
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+	</welcome-file-list>
+</web-app>

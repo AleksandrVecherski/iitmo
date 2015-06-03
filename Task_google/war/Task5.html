@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Task5</title>
+</head>
+
+<script src="jquery-2.1.4.min.js"></script>
+ 
+<script>
+ 
+  $( function() {
+    $('#calc1').click( function() {
+    	var num1 = $('#num1').val();
+    	var operation = "1"; //$('#operation').val();
+    	
+      $('#result').load( "/task5Servlet?num1="+num1+"&operation="+operation);
+    } );
+ 
+           
+  } );
+  
+  $( function() {
+	    $('#calc2').click( function() {
+	    	var num2 = $('#num2').val();
+	    	var operation = "2"; //$('#operation').val();
+	    	
+	      $('#result2').load( "/task5Servlet?num2="+num2+"&operation="+operation);
+	    } );
+	 
+	           
+	  } );
+  
+  $( function() {
+	    $('#calc3').click( function() {
+	    	var num3 = $('#num3').val();
+	    	var operation = "3"; //$('#operation').val();
+	    	
+	      $('#result3').load( "/task5Servlet?num3="+num3+"&operation="+operation);
+	    } );
+	 
+	           
+	  } );
+  
+  $( function() {
+	    $('#calc4').click( function() {
+	    	var num4 = $('#num4').val();
+	    	var operation = "4"; //$('#operation').val();
+	    	
+	      $('#result4').load( "/task5Servlet?num4="+num4+"&operation="+operation);
+	    } );
+	 
+	           
+	  } );
+  
+  </script>
+
+<body>
+ <div id="button-1"><TABLE > 
+    
+    		 <TR>
+    		 <TD><h2 align="center">Проверка числа</h2></TD>
+    		 </TR> 	
+             <TR>       
+       	 	 <TD>Введите число</TD>   
+             <TD><input type="text" name="num1" id="num1" /></TD> 
+             </TR> 
+                            
+             <tr>
+             <td> <button id="calc1">Выполнить</button> <td>
+             <td> <div id="result"></div> </td>
+      </TABLE> </div>
+      
+      <div id="button-1"><TABLE > 
+    
+    		 <TR>
+    		 <TD><h2 align="center">Проверка строки</h2></TD>
+    		 </TR> 	
+             <TR>       
+       	 	 <TD>Введите строку</TD>   
+             <TD><input type="text" name="num2" id="num2" /></TD> 
+             </TR> 
+                            
+             <tr>
+             <td> <button id="calc2">Выполнить</button> <td>
+             <td> <div id="result2"></div> </td>
+      </TABLE> </div>
+      
+       <div id="button-1"><TABLE > 
+    
+    		 <TR>
+    		 <TD><h2 align="center">Проверка первой буквы</h2></TD>
+    		 </TR> 	
+             <TR>       
+       	 	 <TD>Введите строку</TD>   
+             <TD><input type="text" name="num3" id="num3" /></TD> 
+             </TR> 
+                            
+             <tr>
+             <td> <button id="calc3">Выполнить</button> <td>
+             <td> <div id="result3"></div> </td>
+      </TABLE> </div>
+      
+       <div id="button-1"><TABLE > 
+    
+    		 <TR>
+    		 <TD><h2 align="center">Проверка даты</h2></TD>
+    		 </TR> 	
+             <TR>       
+       	 	 <TD>Введите дату</TD>   
+             <TD><input type="text" name="num4" id="num4" /></TD> 
+             </TR> 
+                            
+             <tr>
+             <td> <button id="calc4">Выполнить</button> <td>
+             <td> <div id="result4"></div> </td>
+      </TABLE> </div>
+</body>
+</html>

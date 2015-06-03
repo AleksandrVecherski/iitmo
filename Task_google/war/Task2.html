@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Task2</title>
+
+<style type="text/css">
+div {
+	margin:4px;
+	padding:4px;
+	border:1px solid gray;
+	border-radius:5px;
+}
+
+#button-1 {
+	float:left;
+	}
+#button-2 {
+	float:left;
+	}
+#button-3 {
+	float:left;
+	}
+#button-4 {
+	float:left;
+	}
+</style>
+
+</head>
+
+<script src="jquery-2.1.4.min.js"></script>
+ 
+<script>
+ 
+  $( function() {
+    $('#calc1').click( function() {
+    	var chislo311 = $('#chislo311').val();
+    	var chislo312 = $('#chislo312').val();
+    	var operation = "1"; //$('#operation').val();
+    	
+      $('#result').load( "/task2Servlet?chislo311="+chislo311+"&chislo312="+chislo312+"&operation="+operation);
+    } );
+ 
+           
+  } );
+  
+  $( function() {
+	    $('#calc2').click( function() {
+	    	var chislo321 = $('#chislo321').val();
+	    	var chislo322 = $('#chislo322').val();
+	    	var chislo323 = $('#chislo323').val();
+	    	var operation = "2"; //$('#operation').val();
+	    	
+	      $('#result2').load( "/task2Servlet?chislo321="+chislo321+"&chislo322="+chislo322+"&chislo323="+chislo323+"&operation="+operation);
+	    } );
+	 
+	           
+	  } );
+  
+  $( function() {
+	  $('#calc3').click( function() {
+	    	var operation = "3"; //$('#operation').val();
+	    	
+	      $('#result3').load( "/task2Servlet?operation="+operation);
+	    } );
+   
+  } ); 
+  
+  $( function() {
+	  $('#calc4').click( function() {
+	    	var operation = "4"; //$('#operation').val();
+	    	
+	      $('#result4').load( "/task2Servlet?operation="+operation);
+	    } );
+   
+  } ); 
+  </script>
+  
+<body>
+
+    
+    <div id="button-1"><TABLE > 
+    
+    		 <TR>
+    		 <TD><h2 align="center">Задание 3.1</h2></TD>
+    		 </TR> 	
+             <TR>       
+       	 	 <TD>Число1</TD>   
+             <TD><input type="text" name="Chislo1" id="chislo311" /></TD> 
+             </TR> 
+             <TR>               
+             <TD> Число2</TD>
+             <TD><input type="text" name="Chislo2" id="chislo312" /></TD>
+             </TR>
+                 
+             <tr>
+             <td> <button id="calc1">Выполнить1</button> <td>
+             <td> <div id="result"></div> </td>
+      </TABLE> </div>
+     
+      <div id="button-2"><TABLE >
+       <TR>
+    		 <TD><h2 align="center">Задание 3.2</h2></TD>
+    		 </TR> 	
+             <TR>       
+       	 	 <TD>Число1</TD>   
+             <TD><input type="text" name="Chislo3" id="chislo321" /></TD> 
+             </TR> 
+             <TR>               
+             <TD> Число2</TD>
+             <TD><input type="text" name="Chislo4" id="chislo322" /></TD>
+             </TR>
+              <TR>               
+             <TD> Число3</TD>
+             <TD><input type="text" name="Chislo5" id="chislo323" /></TD>
+             </TR>
+                 
+             <tr>
+             <td> <button id="calc2">Выполнить2</button> <td>
+             <td> <div id="result2"></div> </td>
+             </TR>
+      </TABLE></div>
+      
+       <div id="button-3"><TABLE> 
+             <TR>
+    		 <TD><h2 align="center">Задание 3.3</h2></TD>
+    		 </TR> 
+             <tr>
+             <td> <button id="calc3">Выполнить3</button> <td>
+             <td> <div id="result3"> </div>  </td>
+            
+
+      </TABLE></div>
+      
+      <div  id="button-4"><TABLE > 
+             <TR>
+    		 <TD><h2 align="center">Задание 3.4</h2></TD>
+    		 </TR> 
+             <tr>
+             <td> <button id="calc4">Выполнить4</button> <td>
+             <td> <div id="result4"> </div> </td>
+           
+      </TABLE><div>
+</body>
+</html>

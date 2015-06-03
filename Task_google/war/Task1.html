@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Задание 1</title>
+<style type="text/css">
+#map-canvas {
+	height: 600px;
+	width: 1300px;
+	margin: 10px;
+	padding: 5px;
+	border: 5px black;
+}
+</style>
+</head>
+
+<script
+	src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+
+
+<script>		/*function initialize() {	
+	
+	var myLatlng = new google.maps.LatLng(-25.363882, 131.044922);
+	
+	var myLatlng2 = new google.maps.LatLng(-26.473882, 135.164922);
+	var mapOptions = {	
+			zoom : 4,	
+			center : myLatlng};
+	map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);
+	var contentString = '<div id="content">'+ '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'
+	+ '<div id="bodyContent">'
+	+ '<p><b>Uluru</b>, also referred to as <b>Ayers Rock</b>,'
+	+ '(last visited June 22, 2009).</p>' + '</div>' + '</div>';
+	
+	var contentString2 = 'TEST';
+	var infowindow = new google.maps.InfoWindow({
+		content : contentString
+		});
+	var marker = new google.maps.Marker({
+		position : myLatlng,
+		map : map,
+		title : 'Uluru (Ayers Rock)'
+		});
+	google.maps.event.addListener(marker, 'click', function() {
+		infowindow.open(map, marker);
+	});
+	}		google.maps.event.addDomListener(window, 'load', initialize);*/
+	
+	function createMarker(myLatlng, contentString, mytitle) {
+		var marker = new google.maps.Marker({
+			position : myLatlng,
+			map : map,
+			title : mytitle
+			});	
+		var infowindow = new google.maps.InfoWindow({
+			content : contentString
+			});	
+		google.maps.event.addListener(marker, 'click', function() {	
+			infowindow.open(map, marker);
+			});
+		}
+	
+	function initialize() {
+		
+		var myLatlng = new google.maps.LatLng(-25.363882, 131.044922);
+		var myLatlng2 = new google.maps.LatLng(-26.473882, 135.164922);	
+		var mapOptions = {	
+				zoom : 4,
+				center : myLatlng			};
+		map = new google.maps.Map(document.getElementById('map-canvas'),mapOptions);	
+		var contentString = 'Text 1';
+		var contentString2 = 'Text 2';
+		createMarker(myLatlng, contentString, 'Uluru (Ayers Rock)');
+		createMarker(myLatlng2, contentString2, 'Place second');	
+		}	
+	google.maps.event.addDomListener(window, 'load', initialize);
+	
+	
+	</script>
+</head>
+<body>
+	<div id="map-canvas"></div>
+</body>
+</html>
