@@ -24,6 +24,11 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet>
 	
 	<servlet>
+		<servlet-name>Task4Servlet</servlet-name>
+		<servlet-class>com.test.Task4Servlet</servlet-class>
+	</servlet>
+	
+	<servlet>
 		<servlet-name>Task5Servlet</servlet-name>
 		<servlet-class>com.test.Task5Servlet</servlet-class>
 	</servlet>
@@ -46,6 +51,11 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet-mapping>
 		<servlet-name>Task3Servlet</servlet-name>
 		<url-pattern>/task3Servlet</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+		<servlet-name>Task4Servlet</servlet-name>
+		<url-pattern>/task4Servlet</url-pattern>
 	</servlet-mapping>
 	
 	<servlet-mapping>
